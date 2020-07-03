@@ -1,14 +1,40 @@
 package Zadachka;
 
-public interface Box {
+import java.util.ArrayList;
 
-    void weight();
+public class Box implements BoxInter{
 
+    private static ArrayList<Sweets> list = new ArrayList<Sweets>();
 
-    void price();
+    @Override
+    public void add(Sweets sweets) {
+        list.add(sweets);
+    }
 
+    @Override
+    public void delete(Sweets sweets) {
+        list.remove(sweets);
+    }
 
-    void add ();
+    @Override
+    public void showWeight() {
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++)
+            sum += list.get(i).weight;
+        System.out.println("Total weight = " + sum);
+    }
 
-    void delete();
+    @Override
+    public void showPrice() {
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++)
+            sum += list.get(i).price;
+        System.out.println("Total price = " + sum);
+    }
+
+    @Override
+    public void showInfo() {
+        for (int i = 0; i < list.size(); i++)
+            System.out.println(list.get(i));
+    }
 }

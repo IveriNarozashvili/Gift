@@ -1,25 +1,11 @@
 package Zadachka;
 
-public  class Batonchik extends Sweets implements Box {
+public  class Batonchik extends Sweets {
 
-    @Override
-    public void weight() {
-        System.out.println("Вес батончика 71 грамм");
+    public Batonchik(String name, double weight, double price, String withNuts) {
+        super(name, weight, price);
+        this.withNuts = withNuts;
     }
-
-    @Override
-    public void price() {
-        System.out.println("Цена батончика 31 рубль");
-    }
-
-    @Override
-    public void add (){
-
-    }
-
-    @Override
-    public void delete(){
-
-    }
+    public String withNuts;
 }
 

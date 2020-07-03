@@ -1,24 +1,10 @@
 package Zadachka;
 
-public  class Konfeta extends Sweets implements Box {
+public  class Konfeta extends Sweets {
 
-    @Override
-    public void weight() {
-        System.out.println("Вес конфеты 15 граммов");
+    public Konfeta(String name, double weight, double price, String type) {
+        super(name, weight, price);
+        this.type = type;
     }
-
-    @Override
-    public void price() {
-        System.out.println("Цена конфеты 7 рублей");
-    }
-
-    @Override
-    public void add (){
-
-    }
-
-    @Override
-    public void delete(){
-
-    }
+    public String type;
 }

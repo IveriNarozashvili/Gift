@@ -1,25 +1,11 @@
 package Zadachka;
 
-public  class Shokolad extends Sweets implements Box {
+public  class Shokolad extends Sweets  {
 
-    @Override
-    public void weight() {
-        System.out.println("Вес шоколада 100 грамм");
+    public Shokolad(String name, double weight, double price, String milk) {
+        super(name, weight, price);
+        this.milk = milk;
     }
-
-    @Override
-    public void price() {
-        System.out.println("Цена шоколада 39 рублей");
-    }
-
-    @Override
-     public void add (){
-
-    }
-
-    @Override
-    public void delete(){
-
-    }
+    public String milk;
 }
 

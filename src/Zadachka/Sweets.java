@@ -2,16 +2,20 @@ package Zadachka;
 
 public abstract class Sweets {
 
-    void weight(){
 
+    protected String name;
+    protected double weight;
+    protected double price;
+
+    public Sweets(String name, double weight, double price) {
+        this.name = name;
+        this.weight = weight;
+        this.price = price;
     }
-
-    void price(){
-
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", price=" + price;
     }
-
-    void name(){
-
-    }
-
 }
