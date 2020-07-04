@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Box implements BoxInter{
 
-    private static ArrayList<Sweets> list = new ArrayList<Sweets>();
+    private ArrayList<Sweets> list = new ArrayList<Sweets>();
 
     @Override
     public void add(Sweets sweets) {
@@ -13,7 +13,7 @@ public class Box implements BoxInter{
 
     @Override
     public void delete(Sweets sweets) {
-        list.remove(sweets);
+        list.remove(0);
     }
 
     @Override
